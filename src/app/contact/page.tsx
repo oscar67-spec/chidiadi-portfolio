@@ -12,8 +12,8 @@ const channels = [
   {
     label: "Email",
     value: "oscar@oscardaniel.tech",
-    href: "mailto:oscar@oscardaniel.tech",
-    note: "The best way to reach me",
+    href: "#send-a-message",
+    note: "Works better here, no mail client needed",
   },
   {
     label: "X (Twitter)",
@@ -76,10 +76,10 @@ export default function ContactPage() {
 
         <div className="mt-10 flex flex-wrap gap-3">
           <a
-            href="mailto:oscar@oscardaniel.tech"
+            href="#send-a-message"
             className="nav-label flex h-12 items-center rounded-full bg-royal px-7 text-canvas transition-opacity hover:opacity-85"
           >
-            Email me
+            Send a message
           </a>
           <a
             href="https://x.com/TFAwinner"
@@ -100,8 +100,8 @@ export default function ContactPage() {
             <a
               key={c.label}
               href={c.href}
-              target="_blank"
-              rel="noopener noreferrer"
+              target={c.href.startsWith("http") ? "_blank" : undefined}
+              rel={c.href.startsWith("http") ? "noopener noreferrer" : undefined}
               className="group grid grid-cols-[1fr_auto] items-center gap-4 border-b border-line py-5 transition-colors hover:text-accent"
             >
               <div>
@@ -112,11 +112,75 @@ export default function ContactPage() {
                 <p className="mt-1 text-[14px] text-muted">{c.note}</p>
               </div>
               <span className="text-[18px] text-accent" aria-hidden="true">
-                ↗
+                {c.href.startsWith("http") ? "↗" : "→"}
               </span>
             </a>
           ))}
         </div>
+
+        <section id="send-a-message" className="mt-14 max-w-[860px] scroll-mt-24">
+          <h2 className="font-serif text-[clamp(1.8rem,4vw,2.6rem)] font-medium leading-[1.1] text-royal">
+            Send me a <em className="italic">message</em>.
+          </h2>
+          <p className="mt-3 text-[16px] text-muted">
+            Straight to my inbox. Nothing here is published, and I read everything myself.
+          </p>
+
+          <form
+            action="https://formsubmit.co/oscar@oscardaniel.tech"
+            method="POST"
+            className="mt-8 grid gap-5 border-t border-line pt-8"
+          >
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+            <input type="hidden" name="_subject" value="Portfolio inquiry" />
+            <input type="hidden" name="_honey" value="" />
+            <input type="hidden" name="_next" value="https://oscardaniel.tech/sent" />
+
+            <label className="grid gap-2">
+              <span className="eyebrow">Your name</span>
+              <input
+                required
+                type="text"
+                name="name"
+                autoComplete="name"
+                placeholder="Your name"
+                className="w-full border border-line rounded px-5 py-3 text-ink placeholder:text-muted/70 bg-canvas-soft/30 focus:outline-none focus:border-accent"
+              />
+            </label>
+
+            <label className="grid gap-2">
+              <span className="eyebrow">Your email</span>
+              <input
+                required
+                type="email"
+                name="email"
+                autoComplete="email"
+                placeholder="you@company.com"
+                className="w-full border border-line rounded px-5 py-3 text-ink placeholder:text-muted/70 bg-canvas-soft/30 focus:outline-none focus:border-accent"
+              />
+            </label>
+
+            <label className="grid gap-2">
+              <span className="eyebrow">Message</span>
+              <textarea
+                required
+                name="message"
+                rows={5}
+                autoComplete="off"
+                placeholder="Tell me what you're building and why you think I can help."
+                className="w-full border border-line rounded px-5 py-3 text-ink placeholder:text-muted/70 bg-canvas-soft/30 focus:outline-none focus:border-accent"
+              />
+            </label>
+
+            <button
+              type="submit"
+              className="nav-label h-12 w-fit justify-self-start rounded-full bg-royal px-7 text-canvas transition-opacity hover:opacity-85"
+            >
+              Send message
+            </button>
+          </form>
+        </section>
 
         <section className="mt-16 max-w-[860px]">
           <h2 className="font-serif text-[clamp(1.8rem,4vw,2.6rem)] font-medium leading-[1.1] text-royal">
@@ -133,12 +197,12 @@ export default function ContactPage() {
         </section>
 
         <p className="mt-14 max-w-[785px] text-[15px] leading-relaxed text-muted">
-          The best way to reach me is email:{" "}
+          The best way to reach me is the{" "}
           <a
-            href="mailto:oscar@oscardaniel.tech"
+            href="#send-a-message"
             className="text-royal underline underline-offset-4 hover:no-underline"
           >
-            oscar@oscardaniel.tech
+            send-a-message form
           </a>
           . I&rsquo;m based in Abia, Nigeria and I work remotely with founders worldwide.
         </p>

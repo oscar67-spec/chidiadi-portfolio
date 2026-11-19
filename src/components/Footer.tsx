@@ -59,12 +59,12 @@ export function Footer() {
               </Link>
               <span className="nav-label text-muted">Issue 01, Abia · Nigeria</span>
               <div className="flex flex-wrap gap-6">
-                <a
-                  href="mailto:oscar@oscardaniel.tech"
+                <Link
+                  href="/contact"
                   className="nav-label text-ink hover:text-accent"
                 >
-                  Email
-                </a>
+                  Contact
+                </Link>
                 <a
                   href="https://www.linkedin.com/in/chidiadi-oscar-792b01358"
                   target="_blank"
