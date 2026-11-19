@@ -1,0 +1,43 @@
+---
+title: "I built 12 AI workflows in a single month. Only 3 are still running."
+description: "A post-mortem on AI automation: why most workflows die within two weeks, and what separates the 3 that survived from the 9 that were abandoned."
+date: "2026-11-03"
+category: "writing"
+area: "AI automation"
+source: "Notes"
+status: "live"
+readTime: "6 min"
+tags: ["AI Automation", "n8n", "Post-mortem", "Workflow"]
+---
+
+Most people treat AI automation like a magic wand. You prompt it, it works, you move on.
+
+I built 12 AI workflows in a single month. Only 3 are still running today. The other 9 were abandoned within two weeks.
+
+Here is the autopsy.
+
+## The pattern
+
+The workflows that died shared a few traits:
+
+1. **They solved a problem no one actually had.** I built them because I *could*, not because someone asked. A beautiful automation that nobody uses is just a complicated way to procrastinate.
+2. **They required daily human babysitting.** If an agent needs you to check it every morning to make sure it didn't hallucinate a lead or send a weird message, it hasn't automated anything. It's just given you a new chore.
+3. **They broke the moment an API changed.** No error handling, no retries, no fallback. One 401 and the whole chain collapses.
+
+## What survived
+
+The 3 that are still running all have something in common: they connect directly to revenue or time saved, and they run unattended.
+
+- **X Lead Finder:** An automated pipeline that sources leads on X and drafts personalized outreach. It runs on a schedule, logs results to a sheet, and pings me only when a lead meets a qualification threshold.
+- **WhatsApp Sales Agent:** An end-to-end sales assistant that handles conversations, qualifies prospects, and books calls. It has guardrails: when it's unsure, it hands off to a human.
+- **Google Maps Business Scraper:** A high-efficiency scraping workflow for local business intelligence and lead generation, delivering clean data without manual copy-pasting.
+
+## The lesson
+
+AI automation isn't about building the most impressive workflow. It's about building the *boring* one, the one that quietly works in the background while you do something else.
+
+If you're building AI agents, ask yourself before you start: will this still be running in two weeks? If the answer isn't a confident yes, don't build it yet.
+
+---
+
+*Originally shared on LinkedIn. Read more of my writing on [The Blueprint](https://blueprintt.substack.com/).*

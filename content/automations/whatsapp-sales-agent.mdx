@@ -1,0 +1,40 @@
+---
+title: "AI WhatsApp Sales Agent"
+description: "An intelligent sales assistant that handles end-to-end sales conversations on WhatsApp."
+date: "2024-09-15"
+category: "automations"
+area: "Sales"
+status: "prototype"
+readTime: "4 min"
+tags: ["n8n", "WhatsApp", "AI Agent", "Sales", "Conversational AI"]
+statusBadge: "Prototype"
+---
+
+## The problem
+
+Sales conversations happen in real time. A prospect messages on WhatsApp at 9 PM. If you don't reply until morning, they've already bought from a competitor. But founders can't sit on WhatsApp all day.
+
+## The solution
+
+An AI sales agent that handles WhatsApp conversations end-to-end:
+
+1. **Receives inbound messages** via WhatsApp Business API
+2. **Qualifies the prospect:** budget, timeline, decision authority, fit
+3. **Answers product questions** using a knowledge base of the company's offerings
+4. **Handles objections** with proven sales responses
+5. **Books calls** directly onto the sales calendar when a lead is qualified
+6. **Hands off to a human** when the conversation gets complex or the prospect asks to talk to a person
+
+## The stack
+
+- n8n for workflow logic
+- WhatsApp Business API for messaging
+- OpenAI (GPT-4) for conversation intelligence
+- Calendly for booking
+- Pinecone/Weaviate for knowledge base retrieval (RAG)
+
+## The result
+
+Sales conversations that happen while you sleep. Qualified leads get booked calls automatically. Unqualified prospects get answered politely without wasting your time.
+
+*Status: Prototype*

@@ -1,0 +1,202 @@
+@import url("https://api.fontshare.com/v2/css?f[]=host-grotesk@400,500,600,700&display=swap");
+@import "tailwindcss";
+
+:root {
+  --canvas: #eee9e3;
+  --canvas-soft: #e6dfd3;
+  --ink: #1e1c1a;
+  --muted: #5e5850;
+  --accent: #e0482f;
+  --royal: #2b47a0;
+  --line: rgba(30, 28, 26, 0.18);
+  --line-soft: rgba(30, 28, 26, 0.1);
+}
+
+[data-theme="dark"] {
+  --canvas: #151412;
+  --canvas-soft: #1e1c19;
+  --ink: #ece7de;
+  --muted: #a9a096;
+  --accent: #f2684a;
+  --royal: #9db0ff;
+  --line: rgba(236, 231, 222, 0.2);
+  --line-soft: rgba(236, 231, 222, 0.1);
+}
+
+@theme inline {
+  --color-canvas: var(--canvas);
+  --color-canvas-soft: var(--canvas-soft);
+  --color-ink: var(--ink);
+  --color-muted: var(--muted);
+  --color-accent: var(--accent);
+  --color-royal: var(--royal);
+  --color-line: var(--line);
+  --color-line-soft: var(--line-soft);
+
+  --font-sans: "Host Grotesk", "Helvetica Neue", system-ui, -apple-system, sans-serif;
+  --font-serif: var(--font-cormorant), "Cormorant Garamond", Garamond, "Times New Roman", serif;
+}
+
+html {
+  background-color: var(--canvas);
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--canvas);
+  color: var(--ink);
+  font-family: var(--font-sans);
+  font-size: 17px;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 0.35s ease, color 0.35s ease;
+}
+
+::selection {
+  background: var(--accent);
+  color: #f5f1ea;
+}
+
+.font-serif {
+  font-family: var(--font-serif);
+}
+
+.eyebrow {
+  font-family: var(--font-sans);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.nav-label {
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+}
+
+.hand-mark {
+  display: inline-block;
+  width: 34px;
+  height: 8px;
+  flex: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 34 8'%3E%3Cpath d='M1 6.2C7 2.4 15 2.1 21 3.6c4 1 8 1.2 12 .2' fill='none' stroke='%23E0482F' stroke-width='1.4' stroke-linecap='round'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.text-balance {
+  text-wrap: balance;
+}
+
+/* ---------- article body ---------- */
+
+.article-body {
+  font-size: 19px;
+  line-height: 1.72;
+  color: var(--ink);
+}
+
+.article-body > p:first-of-type {
+  font-family: var(--font-serif);
+  font-size: 26px;
+  line-height: 1.42;
+  color: var(--muted);
+  margin-bottom: 1.5em;
+}
+
+.article-body p {
+  margin-bottom: 1.5em;
+}
+
+.article-body a {
+  color: var(--royal);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.article-body strong {
+  font-weight: 600;
+}
+
+.article-body h2 {
+  font-family: var(--font-serif);
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.15;
+  color: var(--royal);
+  margin-top: 2em;
+  margin-bottom: 0.55em;
+}
+
+.article-body h3 {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 26px;
+  line-height: 1.2;
+  color: var(--ink);
+  margin-top: 1.6em;
+  margin-bottom: 0.5em;
+}
+
+.article-body ul,
+.article-body ol {
+  margin-bottom: 1.5em;
+  padding-left: 1.4em;
+}
+
+.article-body ul {
+  list-style: disc;
+}
+
+.article-body ol {
+  list-style: decimal;
+}
+
+.article-body li {
+  margin-bottom: 0.5em;
+}
+
+.article-body blockquote {
+  font-family: var(--font-serif);
+  font-size: 25px;
+  font-style: italic;
+  line-height: 1.4;
+  color: var(--muted);
+  border-left: 2px solid var(--accent);
+  padding-left: 1.25rem;
+  margin: 1.75em 0;
+}
+
+.article-body code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.85em;
+  background: var(--canvas-soft);
+  padding: 0.1em 0.35em;
+  border-radius: 3px;
+}
+
+.article-body pre {
+  background: var(--ink);
+  color: var(--canvas);
+  padding: 1.5rem;
+  border-radius: 6px;
+  overflow-x: auto;
+  margin-bottom: 1.5em;
+}
+
+.article-body pre code {
+  background: transparent;
+  padding: 0;
+  color: inherit;
+}
+
+.article-body hr {
+  border: none;
+  border-top: 1px solid var(--line);
+  margin: 2.5em 0;
+}

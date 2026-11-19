@@ -1,0 +1,36 @@
+---
+title: "Order-to-Sheets Automation"
+description: "A simple system that auto-adds order details to the right Google Sheet by product: no manual data entry, no mistakes."
+date: "2026-10-27"
+category: "automations"
+area: "Order operations"
+status: "live"
+readTime: "3 min"
+tags: ["n8n", "Google Sheets", "Ecommerce", "Order Management", "Automation"]
+statusBadge: "Live"
+---
+
+## The problem
+
+Manually typing every new order into Google Sheets is slow and error-prone. For an ecommerce business, that's hours lost to data entry every week, and one typo means a shipment goes to the wrong address.
+
+## The solution
+
+A simple automation that:
+
+1. **Captures new orders** as they come in (storefront, form, or email)
+2. **Parses the order details:** customer, product, quantity, shipping address, total
+3. **Routes each order to the right sheet** based on product category
+4. **Logs it instantly:** no manual typing, no copy-pasting
+
+## The stack
+
+- n8n for workflow logic
+- Google Sheets as the database
+- Webhook or email trigger for new orders
+
+## The result
+
+Orders flow into the right sheets automatically. Zero manual data entry. Zero transcription errors. The team spends time fulfilling orders, not typing them.
+
+*Status: Live*

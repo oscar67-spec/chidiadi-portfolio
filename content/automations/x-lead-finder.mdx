@@ -1,0 +1,38 @@
+---
+title: "X (Twitter) Lead Finder"
+description: "An automated pipeline for sourcing leads on X and generating personalized outreach at scale."
+date: "2024-02-11"
+category: "automations"
+area: "Lead generation"
+status: "live"
+readTime: "4 min"
+tags: ["n8n", "X (Twitter)", "Lead Generation", "Outreach", "AI"]
+statusBadge: "Live"
+---
+
+## The problem
+
+Manual lead sourcing on X is slow. You scroll, you find a prospect, you copy their profile, you draft a message. Repeat. It's a part-time job just to fill a pipeline.
+
+## The solution
+
+I built an automated lead-finding pipeline that:
+
+1. **Monitors X** for prospects matching ideal customer criteria (keywords, bio signals, engagement patterns)
+2. **Enriches each lead:** pulls profile data, recent posts, company context
+3. **Drafts personalized outreach** using an LLM, tailored to each prospect's actual content (no generic "I see you're a founder" messages)
+4. **Logs everything** to a Google Sheet with status tracking (queued, sent, replied, converted)
+5. **Pings the user** only when a lead meets a qualification threshold
+
+## The stack
+
+- n8n for workflow orchestration
+- X API for data collection
+- OpenAI (GPT) for personalized message generation
+- Google Sheets for lead tracking
+
+## The result
+
+A hands-off lead engine. The founder reviews approved drafts and hits send. The sourcing and drafting happen automatically in the background.
+
+*Status: Live*
