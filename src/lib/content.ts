@@ -97,7 +97,7 @@ export const SITE = {
   title: "Chidiadi Oscar · Writer & AI Automation Engineer",
   description:
     "AI Consultant, Premium Ghostwriter for B2B SaaS & AI founders, and AI Automation Engineer. I turn founder expertise into clear thought leadership and build AI agents that replace manual work.",
-  url: "https://chidiadi-oscar.vercel.app",
+  url: "https://chidiadi-portfolio-seven.vercel.app",
   author: {
     name: "Chidiadi Oscar",
     bio: "AI Consultant and Premium Ghostwriter for B2B SaaS & AI founders. I turn your expertise into clear, coherent thought leadership, and I build n8n-based AI agents that automate the work you shouldn't be doing by hand.",
